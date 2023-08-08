@@ -33,7 +33,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   test 'should set another user admin' do
     patch "/api/edge/users/admin/#{users(:john).id}", headers: { Authorization: "Bearer #{users(:admin).token}" }
 
-    assert_equal 'User is now admin', JSON.parse(@response.body)['message']
+    assert_equal 'User is admin now', JSON.parse(@response.body)['message']
     assert_response :ok
   end
 
