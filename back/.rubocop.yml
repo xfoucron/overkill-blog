@@ -1,0 +1,30 @@
+require:
+  - rubocop-rails
+  - rubocop-minitest
+  - rubocop-performance
+
+AllCops:
+  TargetRubyVersion: 3.1.2
+  TargetRailsVersion: 7.0
+  Exclude:
+    - "bin/*"
+    - "db/schema.rb"
+    - "db/migrate/*"
+    - "public/**/*"
+    - "vendor/**/*"
+    - "log/**/*"
+    - "tmp/**/*"
+
+Bundler/OrderedGems:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - "test/**/*"
