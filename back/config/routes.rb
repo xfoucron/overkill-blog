@@ -1,8 +1,15 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  scope 'api' do
+    scope 'edge' do
+      scope 'users' do
+        post 'signup', to: 'users#create'
+        delete 'destroy', to: 'users#destroy'
+        patch 'admin/:user_id', to: 'users#admin'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+        post 'login', to: 'sessions#create'
+      end
+    end
+  end
 end

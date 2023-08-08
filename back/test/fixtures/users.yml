@@ -1,0 +1,16 @@
+john:
+  name: John Doe
+  email: john@doe.com
+  password_digest: <%= BCrypt::Password.create('JohnDoeIsASafeMan') %>
+
+admin:
+  name: Admin Istrator
+  email: admin@istrator.com
+  password_digest: <%= BCrypt::Password.create('SuperSafeAdministrator') %>
+  admin: true
+
+thor:
+  name: Thor Hammer
+  email: thor@hammer.com
+  password_digest: <%= BCrypt::Password.create('SuperPowerHammer') %>
+  admin: true
